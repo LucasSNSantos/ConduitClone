@@ -1,7 +1,10 @@
-﻿namespace ConduitCloneAPI.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ConduitCloneAPI.Entities
 {
     public class Article
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string? Title { get; set; }
         public string? Theme { get; set; }
